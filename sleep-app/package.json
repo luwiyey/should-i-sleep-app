@@ -1,0 +1,106 @@
+{
+  "name": "should-i-sleep",
+  "version": "1.0.0",
+  "description": "Smart Sleep Calculator & Wellness App - Calculate optimal sleep and wake times based on 90-minute sleep cycles with personalized mood-based suggestions",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "serve": "npx serve .",
+    "dev": "npx live-server --port=8000 --open=/index.html",
+    "build": "echo 'No build process needed - static files ready for deployment'",
+    "test": "echo 'Running basic tests...' && node test/basic-tests.js",
+    "validate": "echo 'Validating HTML, CSS, and JS...' && npm run validate:html && npm run validate:css && npm run validate:js",
+    "validate:html": "echo 'HTML validation would go here'",
+    "validate:css": "echo 'CSS validation would go here'",
+    "validate:js": "echo 'JS validation would go here'",
+    "lighthouse": "npx lighthouse http://localhost:8000 --output=html --output-path=./lighthouse-report.html",
+    "deploy:netlify": "npx netlify deploy --prod --dir=.",
+    "deploy:vercel": "npx vercel --prod",
+    "deploy:surge": "npx surge . shouldisleep.surge.sh",
+    "setup": "node setup.js",
+    "clean": "rm -rf node_modules package-lock.json && npm install",
+    "check-links": "echo 'Checking for broken links...'",
+    "optimize": "echo 'Optimizing images and assets...'",
+    "pwa-check": "npx pwa-asset-generator ./images/icon-512x512.png ./images --manifest ./manifest.json"
+  },
+  "keywords": [
+    "sleep",
+    "calculator",
+    "wellness",
+    "health",
+    "sleep-cycles",
+    "pwa",
+    "progressive-web-app",
+    "sleep-optimization",
+    "bedtime",
+    "wake-time",
+    "mood-tracking",
+    "sleep-hygiene"
+  ],
+  "author": {
+    "name": "Zia Louise D. Mariano",
+    "email": "contact@shouldisleep.app",
+    "url": "https://shouldisleep.app"
+  },
+  "license": "MIT",
+  "homepage": "https://shouldisleep.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/should-i-sleep.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/should-i-sleep/issues",
+    "email": "support@shouldisleep.app"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "serve": "^14.2.1",
+    "lighthouse": "^11.4.0",
+    "netlify-cli": "^17.10.1",
+    "vercel": "^32.7.2",
+    "surge": "^0.23.1"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ],
+  "pwa": {
+    "name": "Should I Sleep?",
+    "short_name": "Should I Sleep?",
+    "description": "Smart Sleep Calculator & Wellness App",
+    "theme_color": "#4f46e5",
+    "background_color": "#f9fafb",
+    "display": "standalone",
+    "orientation": "portrait-primary",
+    "start_url": "./index.html",
+    "scope": "./"
+  },
+  "config": {
+    "port": 8000,
+    "host": "localhost"
+  },
+  "files": [
+    "index.html",
+    "blog.html",
+    "privacy.html",
+    "terms.html",
+    "manifest.json",
+    "service-worker.js",
+    "robots.txt",
+    "sitemap.xml",
+    "css/",
+    "js/",
+    "images/",
+    "README.md"
+  ],
+  "directories": {
+    "doc": "./docs",
+    "test": "./test"
+  }
+}

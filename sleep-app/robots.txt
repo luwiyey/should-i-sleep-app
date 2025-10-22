@@ -1,0 +1,68 @@
+# Robots.txt for Should I Sleep? App
+# https://shouldisleep.app/robots.txt
+
+User-agent: *
+Allow: /
+
+# Main pages
+Allow: /index.html
+Allow: /blog.html
+Allow: /privacy.html
+Allow: /terms.html
+
+# Static assets
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /manifest.json
+
+# Disallow sensitive or unnecessary files
+Disallow: /service-worker.js
+Disallow: /*.json$
+Disallow: /auth.html
+Disallow: /profile.html
+
+# Sitemap location
+Sitemap: https://shouldisleep.app/sitemap.xml
+
+# Crawl delay (optional - be respectful to search engines)
+Crawl-delay: 1
+
+# Specific instructions for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+# Block common bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+# Allow social media crawlers
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
